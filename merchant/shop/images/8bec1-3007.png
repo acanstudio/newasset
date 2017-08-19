@@ -1,0 +1,69 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"></meta>
+	<title>404</title>
+	<link href="https://sso.dinghuo123.com/portal/css/ui-v1.0.1.css?v=1496808776903" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<style type="text/css">
+a{
+		text-decoration:none;
+	}
+	.main{
+		width:500px;
+		height:500px;
+		position:relative;
+		margin:0 auto;
+		padding-top:100px;
+		text-align:center;
+		font-family:'Microsoft yahei','黑体','宋体';
+	}
+	.main img{
+		display:block;
+		width:200px;
+		height:200px;
+		margin:0 auto;
+	}
+	.main span{
+		display:block;
+		text-align:center;
+		font-size:23px;
+		line-height:50px;
+		color:#5a5a5a;
+	}
+	.main span.backspan{
+		line-height:50px;
+		font-size:18px;
+	}
+	.main span.backspan i{
+		font-style: normal;
+	}
+	.main .ui-submit-blue{
+		width:150px;
+		margin:0 auto;
+		margin-top:30px;
+	}
+	
+</style>
+<div class="main">
+	<img src="https://sso.dinghuo123.com/portal/images/404.png" />
+	<span>非常抱歉! 您访问的页面不存在。</span>
+	<!-- <span class="backspan"><i id="time">5</i>秒后自动返回...</span> -->
+	<a onclick="window.history.go(-1)" class="ui-submit-blue">返回</a>
+</div>
+</body>
+<!-- <script type="text/javascript">
+var t = 5;//设置为5秒
+var time = setInterval(f,1000);
+function f(){
+	var s = t--;
+	document.getElementById("time").innerHTML=s;
+	if(s == 0){
+		clearInterval(time);
+		window.history.go(-1);
+	}
+}
+</script> -->
+</html>

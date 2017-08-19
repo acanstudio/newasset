@@ -1,0 +1,147 @@
+.clearfix { 
+  	*zoom: 1; 
+} 
+.clearfix:before, 
+.clearfix:after { 
+	display: table; 
+	line-height: 0; 
+	content: ""; 
+}
+.clearfix:after { 
+  	clear: both; 
+} 
+/*.pr25{
+	padding-right: 0.25rem;
+}
+.pl25{
+	padding-left: 0.25rem;
+}*/
+li{
+	list-style-type: none;
+}
+.join-banner{
+	height: 4.55rem;
+}
+.join-banner img{
+	height: 4.55rem;
+}
+.Join .join-wrap{
+	text-align: center;
+	background: #fff;
+	padding: 0.5rem 0 0;
+}
+.join-wrap .title{
+	line-height: 0.36rem;
+	font-size: 0.36rem;
+	color: #03b8cc;
+	margin-bottom: 0.5rem;
+}
+.join-part1{
+	height: 5.76rem;
+}
+.join-part1 .title{
+	margin-bottom: 0.2rem;
+}
+.join-part1 .img-wrap a{
+	text-decoration: none;
+	color: #5c5c5c;
+}
+.join-part1 .swiper-container{
+	height: 4.4rem;
+	width: 100%;
+}
+/*.swiper-wrapper{
+	width: 6rem;
+}*/
+.join-part1::after,.join-part2::after,.join-part3::after{
+	content: "";
+	height: 0.2rem;
+	display: block;
+	background: #f7f7f7;
+}
+.swiper-slide-active .img-wrap img{
+	box-shadow: 0 0 8px #333;
+}
+.join-part1 .swiper-container .img-wrap{
+	margin-top: 0.2rem;
+}
+.join-part1 .swiper-container img{
+	height: 3rem;
+	border-radius: 4px;
+}
+.join-part1 .swiper-container p{
+	line-height: 0.55rem;
+}
+.join-part2 .img-box img{
+	height: 5.6rem;
+	margin-bottom: 0.9rem;
+}
+.join-part3 .meet-wrap{
+	padding: 0 0.44rem;
+}
+.join-part3 .meet-wrap li{
+	float: left;
+	width: 50%;
+}
+.meet-wrap li img{
+	/*width: 3rem;
+	height: 1.5rem;*/
+	width: 85%;
+	margin-bottom: .15rem;
+}
+.meet-wrap li p{
+	font-size: 0.26rem;
+	line-height: 0.26rem;
+	margin-bottom: 0.4rem;
+	color: #5c5c5c;
+}
+.Join .join-part4{
+	background: #f7f7f7;
+	padding: 0;
+}
+.join-part4 img{
+	/*height: 3.4rem;*/
+	width: 100%;
+	margin-bottom: 0.8rem;
+}
+.join-part4 input[type="number"],
+.join-part4 input[type="text"],.join-part5 input[type="text"]{
+	width: 6rem;
+	margin-bottom: .22rem;
+	padding: 0 .17rem ;
+	line-height: 0.85rem;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	outline: none;
+	border:1px solid #eeeeee;
+	font-family: 'microsoft Yahei';
+	-webkit-appearance: none;
+	outline: none;
+	font-size: 0.24rem;
+}
+.join-part4 input[type="submit"]{
+	height: 0.8rem;
+	line-height: 0.8rem;
+	font-size: 0.32rem;
+	width: 2.5rem;
+	text-align: center;
+	background-color: #03b8cc;
+	color: #fff;
+	border:none;
+	border-radius: 50px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 0.45rem;
+	-webkit-appearance:none;
+	-webkit-border-radius:50px;
+}
+.Join .join-part5{
+	background: #394a52;
+	padding-bottom: 0.3rem;
+}
+.join-part5 .title{
+	color: #fff;
+}
+.join-part5 .tip{
+	color: #bebebe;
+}

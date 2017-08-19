@@ -1,0 +1,2 @@
+/*! ydh-resource-web author:wmao 2017-05-23*/
+var _vds=_vds||[];window._vds=_vds,function(){_vds.push(["setAccountId","adcc0dd70c8d298b"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://":"http://")+"dn-growing.qbox.me/vds.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()}();

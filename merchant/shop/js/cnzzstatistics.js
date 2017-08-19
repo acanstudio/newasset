@@ -1,0 +1,2 @@
+/*! ydh-resource-web author:wmao 2017-06-01*/
+!function(){var a="https:"==document.location.protocol?" https://":" http://";$("body").append(unescape("%3Cspan id='cnzz_stat_icon_1253299897'%3E%3C/span%3E%3Cscript src='"+a+"s4.cnzz.com/z_stat.php%3Fid%3D1253299897' type='text/javascript'%3E%3C/script%3E"))}();
