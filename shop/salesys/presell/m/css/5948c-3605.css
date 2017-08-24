@@ -1,0 +1,303 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 14px Microsoft YaHei, \5FAE\8F6F\96C5\9ED1, SimSun, \5B8B\4F53, Arial, Verdana;
+    color: #000;
+    text-align: left;
+    overflow: auto;
+}
+
+a:link, a:visited {
+    color: #66C2FF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F00;
+    text-decoration: underline;
+}
+
+input, select, textarea {
+    font: 100% Microsoft YaHei, \5FAE\8F6F\96C5\9ED1, SimSun, \5B8B\4F53, Arial, Verdana;
+}
+
+em {
+    font-style: normal;
+    color: #F00;
+    margin-right: 5px;
+}
+
+img {
+    border: 0 none;
+    vertical-align: middle;
+}
+
+.red {
+    color: #F00;
+}
+
+#order {
+    margin: 0 auto;
+}
+
+.warp {
+    width: auto;
+    height: 100%;
+}
+
+.title {
+    height: 36px;
+    line-height: 36px;
+    color: #FFF;
+    font-size: 18px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    padding-left: 8px;
+}
+
+.warp label.bdxx {
+    float: left;
+    display: inline;
+    overflow: hidden;
+    width: 26%;
+    _width: 25%;
+    text-align: right;
+    padding-right: 2%;
+}
+
+.warp label.bdxxcp {
+    float: left;
+    display: block;
+    width: 95%;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 5%;
+}
+
+.dxbox, .xlbox, .textbox, .text2box, .text3box {
+    float: left;
+    display: inline;
+    overflow: hidden;
+    width: 70%;
+    _width: 69%;
+
+}
+.bon_1{
+    /*margin-left: -1%;*/
+}
+.dxboxcp {
+    float: left;
+    display: block;
+    width: 85%;
+    padding: 0 5% 0 10%;
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.7em;
+}
+
+.dxbox, .text2box, .text3box {
+    line-height: 1.8em;
+}
+
+.bdbox {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    *margin-bottom: 7px;
+}
+
+.dxboxcp label {
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.dxbox label {
+    margin-left: 6px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+.dxbox{
+    margin-left: -6px;
+}
+.textbox input {
+    width: 90%;
+    font-size: 16px;
+    color: #666;
+    padding: 3px 5px;
+    _padding: 2px 5px;
+    background: #FCFCFC;
+}
+
+.text3box #showprice {
+    clear: both;
+    display: inline;
+    font-family: Arial, Verdana;
+    font-size: 14px;
+    font-weight: bold;
+    color: #F60;
+    margin: 0 5px;
+}
+
+.xlbox select.cpxl {
+    font-size: 16px;
+    width: 96%;
+    height: 28px;
+    border: 1px solid #a0a0a0;
+    background: #FCFCFC;
+}
+
+.xlbox select.dqxl {
+    display: block;
+    width: 95%;
+    height: 31px;
+    border: 1px solid #a0a0a0;
+    margin: 10px 0;
+    line-height: 31px;
+    vertical-align: middle;
+}
+.xlbox select:nth-child(1){
+    margin: 0 0 10px 0;
+
+}
+.xlbox select:nth-child(3){
+    margin: 0 0 2px 0;
+}
+.text2box textarea {
+    width: 90%;
+    height: 40px;
+    padding: 4px 5px;
+    background: #FFF;
+}
+
+.text3box input {
+    width: 40px;
+    font: 16px Arial;
+    color: #666;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 8px;
+    padding: 4px 5px 3px;
+    background: #FFF;
+}
+
+.text3box img#code {
+    width: 70px;
+    height: 29px;
+    cursor: pointer;
+}
+
+.text3box a {
+    font-size: 12px;
+    margin-left: 6px;
+}
+
+.subbox {
+    width: 200px;
+    margin-top: 20px;
+    line-height: 30px;
+    padding: 0 0 10px 0;
+    margin-left: 26%;
+}
+
+.subbox span {
+    border: 1px solid #009999;
+    padding: 8px 25% ;
+    color: #fff;
+    background:#009999 ;
+}
+
+#fahuo {
+    height: 95px;
+    font-size: 12px;
+    line-height: 1.8em;
+    padding: 15px 4% 0;
+    background: #EEEEEE;
+}
+#fahuo p{
+    text-align: center;
+}
+#fahuo span {
+    color: #0C3;
+}
+
+/*@media only screen and  (min-width: 320px){
+    .bon_1{
+        margin-left: -1.5%;
+    }
+}*/
+@media only screen and  (min-width: 450px){
+    .xlbox select.dqxl {
+        width: 94%;
+    }
+  /*  .bon_1{
+        margin-left: -1.3%;
+    }*/
+}
+/*@media only screen and  (min-width: 500px){
+    .bon_1{
+        margin-left: -1.2%;
+    }
+}*/
+@media only screen and  (min-width: 550px){
+    .xlbox select.dqxl {
+        width: 93%;
+    }
+ /*   .bon_1{
+        margin-left: -1.1%;
+    }*/
+}
+/*@media only screen and  (min-width: 600px){
+    .bon_1{
+        margin-left: -1.0%;
+    }
+}*/
+@media only screen and  (min-width: 750px){
+    .xlbox select.dqxl {
+        width: 92%;
+    }
+}
+/*@media only screen and  (min-width: 700px){
+    .bon_1{
+        margin-left: -0.8%;
+    }
+}
+@media only screen and  (min-width:800px){
+    .bon_1{
+        margin-left: -0.6%;
+    }
+}
+@media only screen and  (min-width: 1000px){
+    .bon_1{
+        margin-left: -0.5%;
+    }
+}*/
+@media only screen and  (min-width: 1100px){
+    .xlbox select.dqxl {
+        width: 91.5%;
+    }
+}
+@media only screen and  (min-width: 1400px){
+    .xlbox select.dqxl {
+        width: 91%;
+    }
+  /*  .bon_1{
+        margin-left: -0.4%;
+    }*/
+}
+/*
+@media only screen and  (min-width: 1600px){
+    .bon_1{
+        margin-left: -0.3%;
+    }
+}
+@media only screen and  (min-width: 2000px){
+    .bon_1{
+        margin-left: -0.2%;
+    }
+}
+*/
