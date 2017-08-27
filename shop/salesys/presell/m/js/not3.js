@@ -25,9 +25,9 @@ function checktel(){
 function postcheck(){
 	$("#uid").val(finger);
 	try{
-		if ($("input[name='productName']").length != 0){
-			if ($("input[name='productName']:checked").val() == undefined){
-				alert("请选择产品");
+		if ($("input[name='color']").length != 0){
+			if ($("input[name='color']:checked").val() == undefined){
+				alert("请选择颜色");
 				return false;
 			}
 		}
@@ -68,30 +68,30 @@ function postcheck(){
     }
 	
     try{
-		if (document.form.buyerName.value==""){
+		if (document.form.name.value==""){
 			alert('请填写姓名！');
-			document.form.buyerName.focus();
+			document.form.name.focus();
 			return false;
 		}
 		var name = /^[\u4e00-\u9fa5]{2,6}$/;
-		if (!name.test(document.form.buyerName.value)){
+		if (!name.test(document.form.name.value)){
 			alert('姓名格式不正确，请重新填写！');
-			document.form.buyerName.focus();
+			document.form.name.focus();
 			return false;
 		}
     }
     catch(ex){
     } 	
     try{
-		if (document.form.phone.value==""){
+		if (document.form.mobile.value==""){
 			alert('请填写手机号码！');
-			document.form.phone.focus();
+			document.form.mobile.focus();
 			return false;
 		}
 		var form = /^1[3,4,5,6,7,8]\d{9}$/;
-		if (!form.test(document.form.phone.value)){
+		if (!form.test(document.form.mobile.value)){
 			alert('手机号码格式不正确，请重新填写！');
-			document.form.phone.focus();
+			document.form.mobile.focus();
 			return false;
 		}
     }
