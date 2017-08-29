@@ -542,6 +542,7 @@ $(function(){
 		},
 
 		setTrialBox: function(){
+			return ;
 			var _self = this;
 			/*if($("#trilCon").length == 0){
 				$("body").append('<div id="mobileVerifyCon" style="display:none"></div>');

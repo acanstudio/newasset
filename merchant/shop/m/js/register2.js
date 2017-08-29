@@ -2,7 +2,7 @@ var THISPAGE = {};
 $(function(){
 	THISPAGE = {
 	    AI:"",//android or  iphone
-		appUrl:$("#appUrl").val(),
+		appUrl:window.CURRENT_URL,//$("#appUrl").val(),
 		remainTime:60,//获取验证码倒计时
 		getCode:false,//是否已经获取了验证码
 		step1Checked:true, //第一步检查是否都填写了信息从而控制“注册”按钮背景颜色的显示
@@ -74,7 +74,8 @@ $(function(){
 				var password=$.trim($("#password").val());	//密码
 				var industry=$.trim($("#businessType").attr("title"));	//行业
 				var step2Mark=_self.step2Checked;
-				if(companyName&&linkName&&password&&industry){
+				//if(companyName&&linkName&&password&&industry){
+				if(companyName&&linkName&&password){
 					$("#signup").addClass("bg-blue");
 				} else {
 					$("#signup").removeClass("bg-blue");
@@ -165,7 +166,7 @@ $(function(){
 			 */
 			$("#codeChange").click(function(){
 				var timestamp = Date.parse(new Date());
-				$("#imgCode").attr("src",_self.appUrl + "/verifyCode"+"?timestamp="+timestamp);
+				$("#imgCode").attr("src",_self.appUrl + "/captcha.html"+"?timestamp="+timestamp);
 			});
 
 			/**
@@ -249,9 +250,9 @@ $(function(){
 				} else if (!passwordReg.test(_self.formData.password)) {
 					Public.tips({content:"登录密码为6-20位英文或数字"});
 					return false;
-				} else if (!industry) {
+				/*} else if (!industry) {
 					Public.tips({content:"请选择行业"});
-					return false;
+					return false;*/
 				} else {
 					_self.completeRegister();
 				}
@@ -285,21 +286,30 @@ $(function(){
 				return false;
 			} else {
 				_this.attr("disabled",true); //避免反复触发检查是否已存在改用户
-				$.ajax({
-					url:"/ajaxChecking?action=checkUserNameExist&userName="+_self.formData.mobile,
-					type:"GET",
-					dataType:"JSON",
-					success:function(responseText){
-						var dataResponse = $.parseJSON(responseText);
-						if (dataResponse.code == 200) {
-							if (dataResponse.data.ok) {
-								console.log("若用户名可用："+dataResponse.data.ok);
+				
+                var data = {
+                    'type': 'signup',
+                    'field': 'mobile',
+                    'value': _self.formData.mobile,
+                    '_csrf': $("#_csrf").val(),
+                };
+                $.ajax({
+                    type: "POST",
+                    url: "/api-validation.html",
+                    dataType: "json",
+                    data: data,
+                    async: false,
+					success:function(dataResponse){
+						//var dataResponse = $.parseJSON(responseText);
+						if (dataResponse.status == 200) {
+							//if (dataResponse.data.ok) {
+								console.log("若用户名可用：OK");
 								_self.sendMobileCode();
-							} else {
+							/*} else {
 								console.log("若用户名重复："+dataResponse.data.error);
 								Public.tips({ content:dataResponse.data.error});
 								_this.attr("disabled",null);
-							}
+							}*/
 						} else if (dataResponse.code == 500) {
 							Public.tips({ content:dataResponse.message});
 							_this.attr("disabled",null);
@@ -328,18 +338,21 @@ $(function(){
 			var _this = $("#getCode");
 			var postData = {
 				mobile:_self.formData.mobile,
-				verfCode:_self.formData.verfCode
+                type: 'signup',
+				captcha:_self.formData.verfCode,
+		        _csrf: $('#_csrf').val()
 			};
 			_this.attr("disabled",true).text('发送中..');
 
-			$.ajax({
-				url:"/activeCode?action=sendActiveCode",
-				data:postData,
-				type:"POST",
-				dataType:"JSON",
-				success:function(responseText){
-					var dataResponse = $.parseJSON(responseText);
-					if(dataResponse.code == 200){
+    		$.ajax({
+			     url:_self.appUrl+'/api-generate-code.html',
+                 type: 'POST',
+                 data: postData,
+                 dataType: 'json',
+
+				success:function(dataResponse){
+					//var dataResponse = $.parseJSON(responseText);
+					if(dataResponse.status == 200){
 						_self.getCode = true;
 						_this.hide();
 						$("#timeCount").show();
@@ -369,24 +382,27 @@ $(function(){
 			var _self = this;
 			var _this = $("#nextStep");
 			var postData = {
-				userName:_self.formData.mobile,
-				activeCode: _self.formData.activeCode,
+				mobile:_self.formData.mobile,
+				code: _self.formData.activeCode,
+                type: 'signup',
+		        _csrf: $('#_csrf').val()
 			};
-			$.ajax({
-				url:"/register?action=checkActiveCode",
-				data:postData,
-				type:"POST",
-				dataType:"JSON",
+
+    		$.ajax({
+	             url: _self.appUrl+"/api-check-code.html",
+                 type: 'POST',
+                 data: postData,
+                 dataType: 'json',
 				beforeSend:function(){
 					_this.attr("disabled",true).text("提交中");
 				},
-				success:function(responseText){
-					var dataResponse = $.parseJSON(responseText);
-					if(dataResponse.code == "200"){
-						if (dataResponse.data.error) {
+				success:function(dataResponse){
+					//var dataResponse = $.parseJSON(responseText);
+					if(dataResponse.status == "200"){
+						/*if (dataResponse.data.error) {
 							Public.tips({ content:dataResponse.data.error});
 							_this.attr("disabled",null).text("下一步");
-						} else {
+						} else {*/
 							_this.attr("disabled",true).text("提交成功");
 							_self.step1Checked=false;
 							_self.secStepCheck();
@@ -397,7 +413,7 @@ $(function(){
 								$("#navBack").attr({"data-step":"2"});
 								$("#navTitle").text("完善公司信息");
 							},300);
-						}
+						//}
 					}else{
 						Public.tips({ content:dataResponse.message});
 						_this.attr("disabled",null).text('重新提交');
@@ -464,7 +480,7 @@ $(function(){
 		completeRegister:function(){
 			var _self = this;
 			var _this = $("#signup");
-			var postData = {
+			/*var postData = {
 				action:'ajaxReg',
 				isLogin:true,
 				userName:_self.formData.mobile,
@@ -477,11 +493,43 @@ $(function(){
 				recommendCode : $.trim($("#recommendCode").val()),
 				businessTypeId: _self.formData.industry,
 				sc: _self.getQueStr("sc")//推荐有礼
+			};*/
+
+    		var postData = {
+				_csrf: $('#_csrf').val(),
+				mobile:_self.formData.mobile,
+				password:_self.formData.password,
+				code: _self.formData.activeCode,
+				merchant_name:_self.formData.companyName,
+				name:_self.formData.linkman
 			};
 			if(_self.formData.wid){
 				postData.wid = _self.formData.wid;
 			}
-			$.ajax({
+    		$.ajax({
+    	        type: "POST",
+    	        url: _self.appUrl+"/api-register.html",
+    	        dataType: "json",
+    	        data: postData,
+				beforeSend:function(){
+					_this.attr("disabled",true).text("提交中");
+				},
+    	        success: function(responseText){
+    	            if(200 == responseText.status){
+                        alert('恭喜您，注册成功'); 
+                        window.location.href = '/signin.html';
+                 	}else{
+						Public.tips({ content:responseText.message});
+						_this.attr("disabled",null).text('重新提交');
+                 	}
+    	        },
+				error:function(){
+					Public.tips({ content:'系统繁忙，请稍后再试！'});
+					_this.attr("disabled",null).text('重新提交');
+				}
+    	    });
+
+			/*$.ajax({
 				// url:"/register?action=ajaxReg",
 				url:"/register",
 				data:postData,
@@ -493,9 +541,6 @@ $(function(){
 				success:function(responseText){
 					var data = $.parseJSON(responseText);
 					if(data.code == "200"){
-						/**
-						 * 点击进入产品  这个必需在成功后添加 否则会跳到登录界面 但只对iphone和h5有效
-						 */
 						//来源监测
 						if (!THISPAGE.AI) {
 							$("#joinProduct").click(function(e){
@@ -521,7 +566,7 @@ $(function(){
 					Public.tips({ content:'系统繁忙，请稍后再试！'});
 					_this.attr("disabled",null).text('重新提交');
 				}
-			});
+			});*/
 		},
 		/**
 		 * author: thy
