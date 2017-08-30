@@ -153,7 +153,7 @@ function(e) {
                         id: it.val(),
                         name: it.find("option:selected").text()
                     },
-                    N(r.town.id, "请选择地区") || (r.address = et.find('[name="detail"]').val(), N(r.address, "请填写详细地址") || h(r.address, "详细地址太长了", 60)))))) return e.province = r.province.id, e.city = r.city.id, e.county= r.town.id, e.address = r.address, e;
+                    N(r.town.id, "请选择地区") || (r.address = et.find('[name="detail"]').val(), N(r.address, "请填写详细地址") || h(r.address, "详细地址太长了", 60)))))) return e.post_addr = r, e.province = r.province.id, e.city = r.city.id, e.county= r.town.id, e.address = r.address, e;
                     //e.spec_desc = o,
                     //e.gift_spec_desc = i,
                     //e.post_addr = r,
@@ -216,9 +216,9 @@ function(e) {
                 dataType: "json",
                 data: e
             }).always(function(t) {
-                k(e, t),
+                //k(e, t),
                 p(),
-                0 === t.st ? (6 === e.source_type || 8 === e.source_type ? j(e) : TM.stat.umeng_shopping_ocpc(Q, e.source_id, st.come_from || "0"), U(e), It = !0, P(t.data && t.data.order_id)) : L(t.msg || "下单失败")
+                200 === t.status ? (6 === e.source_type || 8 === e.source_type ? j(e) : TM.stat.umeng_shopping_ocpc(Q, e.source_id, st.come_from || "0"), U(e), It = !0, P(t.data && t.data.order_id)) : L(t.msg || "下单失败")
             }))
         }
         function f() {
@@ -389,8 +389,8 @@ function(e) {
             return ut.text(e).fadeIn("fast").delay(2e3).fadeOut("fast")
         }
         function U(e) {
-            rt.find(".name-and-phone").html(e.post_receiver + " " + e.post_tel),
-            rt.find(".address").html(e.post_addr.province.name + e.post_addr.city.name + e.post_addr.town.name + e.post_addr.detail),
+            rt.find(".name-and-phone").html(e.name + " " + e.mobile),
+            rt.find(".address").html(e.post_addr.province.name + e.post_addr.city.name + e.post_addr.town.name + e.address),
             rt.show(),
             TM.utils.addFxgChannel(),
             t("#main").remove(),
