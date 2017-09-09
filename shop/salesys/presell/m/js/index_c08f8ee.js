@@ -218,7 +218,7 @@ function(e) {
             }).always(function(t) {
                 //k(e, t),
                 p(),
-                200 === t.status ? (6 === e.source_type || 8 === e.source_type ? j(e) : TM.stat.umeng_shopping_ocpc(Q, e.source_id, st.come_from || "0"), U(e), It = !0, P(t.data && t.data.order_id)) : L(t.msg || "下单失败")
+                200 === t.status ? (6 === e.source_type || 8 === e.source_type ? j(e) : TM.stat.umeng_shopping_ocpc(Q, e.source_id, st.come_from || "0"), U(e), It = !0, P(t.data && t.data.order_id)) : L(t.message || "下单失败")
             }))
         }
         function f() {
@@ -559,7 +559,7 @@ function(e) {
         function W() {
             if (5 != st.source_type && 9 != st.source_type && !yt && X()) {
                 var e = location.href,
-                t = "/channel/list?come_from=2&id=" + Q + "&show_modal_fxg=" + Y();
+                t = "/?merchant_id=" + Q;
                 history.replaceState({
                     page: "productList",
                     href: t
@@ -614,7 +614,7 @@ function(e) {
                 W()
             }) : void W()
         }
-        var Q = t("#product_id").val(),
+        var Q = t("#merchant_id").val(),
         Z = t("#img_style_switch").val(),
         et = t("#form-container").find("form"),
         tt = t(".normal-spec-info-container", et),
@@ -697,7 +697,7 @@ function(e) {
             location.replace("/order/list")
         }).on("click", "a.return",
         function() {
-            location.replace("/channel/list?come_from=2&id=" + Q)
+            location.replace("/?merchant_id=" + Q)
         })
     })
 });
