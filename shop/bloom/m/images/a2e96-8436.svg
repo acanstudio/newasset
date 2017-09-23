@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="小图标/编辑/删除/可点击">
+            <path d="M13.3207736,5.87695384 L13.3207736,14.5449805 C13.3207736,15.0740214 12.8904324,15.5028938 12.3764073,15.5028938 L3.62359272,15.5028938 C3.1020336,15.5028938 2.6792264,15.0748857 2.6792264,14.5449805 L2.6792264,5.87695384 L2.6792264,5.87695384" id="Rectangle" stroke="#979797" stroke-width="0.8"></path>
+            <rect id="Rectangle-2" fill="#999999" x="2.27922639" y="5.10738243" width="1" height="6" rx="0.5"></rect>
+            <rect id="Rectangle-2-Copy-9" fill="#999999" transform="translate(8.000000, 3.787727) rotate(90.000000) translate(-8.000000, -3.787727) " x="7.5" y="-3.21227286" width="1" height="14" rx="0.5"></rect>
+            <rect id="Rectangle-2-Copy" fill="#999999" x="12.9207736" y="5.10738243" width="1" height="6" rx="0.5"></rect>
+            <rect id="Rectangle-2-Copy-7" fill="#999999" x="9.64287519" y="6.10738243" width="1" height="7.27281488" rx="0.5"></rect>
+            <rect id="Rectangle-2-Copy-8" fill="#999999" x="5.61243777" y="6.10738243" width="1" height="7.27281488" rx="0.5"></rect>
+            <path d="M4.4,2.92698512 L11.6,2.90575018 L11.6,1.43683465 C11.6,1.10166657 11.3324143,0.832228053 11.0029699,0.832228053 L4.99703014,0.832228053 C4.67120581,0.832228053 4.4,1.10207832 4.4,1.42884581 L4.4,2.92698512 Z" id="Rectangle-3" stroke="#979797" stroke-width="0.8"></path>
+        </g>
+    </g>
+</svg>

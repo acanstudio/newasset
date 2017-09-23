@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="会员中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="注册登录页面-验证码" transform="translate(-25.000000, -289.000000)">
+            <g id="手机号码" transform="translate(17.000000, 277.000000)">
+                <g id="icon/绑定手机号码" transform="translate(8.000000, 12.000000)">
+                    <g id="Group-2" transform="translate(2.000000, 0.000000)">
+                        <rect id="Rectangle-26" stroke="#999999" stroke-width="0.8" x="0.4" y="0.4" width="11.2" height="15.2" rx="1"></rect>
+                        <rect id="Rectangle" fill="#999999" x="4.33333333" y="1.69913339" width="3.33333333" height="1" rx="0.5"></rect>
+                        <rect id="Rectangle-26" stroke="#999999" stroke-width="0.8" x="2.54002372" y="3.75805764" width="6.91995256" height="9.49327008" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
