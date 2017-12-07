@@ -94,7 +94,7 @@ p {line-height:1.4;font-size:14px}
 .grey-words {font-size:15px;color:#999}
 .weight {font-weight:700}
 .inbo {display:inline-block;vertical-align:bottom}
-#success-page .title {height:160px;background-image:-webkit-linear-gradient(40deg,#F34242 3%,#EC2362 100%);background-image:-moz-linear-gradient(40deg,#F34242 3%,#EC2362 100%);background-image:-o-linear-gradient(40deg,#F34242 3%,#EC2362 100%);background-image:linear-gradient(130deg,#F34242 3%,#EC2362 100%);color:#fff;text-align:center;padding-top:2px;box-sizing:border-box}
+#success-page .title {height:190px;background-image:-webkit-linear-gradient(40deg,#F34242 3%,#EC2362 100%);background-image:-moz-linear-gradient(40deg,#F34242 3%,#EC2362 100%);background-image:-o-linear-gradient(40deg,#F34242 3%,#EC2362 100%);background-image:linear-gradient(130deg,#F34242 3%,#EC2362 100%);color:#fff;text-align:center;padding-top:2px;box-sizing:border-box}
 #success-page .title .img {width:65px;height:46px;background-position:-7px -48px;margin:0 auto 11px}
 /*#success-page .title .note {line-height:20px;font-size:14px}*/
 #success-page .order-info {background:#fff;padding:16px 12px 20px}
