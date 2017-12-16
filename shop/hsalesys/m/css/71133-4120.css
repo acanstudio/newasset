@@ -1,0 +1,260 @@
+/*
+* @Author: yy
+* @Date:   2016-06-28 16:47:30
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-07-28 09:52:04
+*/
+body{
+	background: #fff;
+}
+input {
+    border-radius: 0;
+    border: none;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 16px;
+    padding: 4px 0;
+    border: 0 none;
+    background:#fff;
+}
+.page{
+    height: 100%;
+}
+.login_logo{
+    text-align:center;
+    margin:35px auto 0;
+    width:150px;
+}
+.login_logo img{
+    width:100%;
+}
+/* .login_logo{
+    text-align:center;
+    margin:35px auto 0;
+    width:100px;
+    height:100px;
+    border:1px solid #e5e5e5;
+    border-radius:50%;
+    vertical-align:middle;
+    position:relative;
+}
+.login_logo img{
+    width:75px;
+    height:auto;
+    position:absolute;
+    left:53%;
+    top:53%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%); 
+} */
+.login-page{    
+    width:100%;
+    min-height:100%;
+   /*  overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch; */
+}
+.login-page .wrap {
+    max-width:100%;
+    margin: 0 auto;
+    padding: 24px 17px;
+}
+.input-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+.acc-input {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 10px 5px 10px 32px;
+    width: 100%;
+    line-height: 20px;
+    background: #f5f5f5;
+    position: relative;
+}
+.input-container:after{
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url('../images/a2a84-6591.svg') no-repeat center;
+    background-size: cover;
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    margin: auto 0;
+}
+.input-container.valicaf{
+    margin-bottom: 45px;;
+}
+.input-container.valicaf:after{
+    background: url('../images/14553-6631.svg') no-repeat center;
+    background-size: cover;
+}
+.input-box {
+    position: relative;
+    padding-right: 96px;
+}
+.mesg-code{
+    position: absolute;
+    height: 32px;
+    line-height: 32px;
+    right: 0;
+    top: 4px;
+    padding: 0 8px;
+    background-color:#fff;
+    color: #333;
+    font-size: 14px;
+    border: none;
+    min-width: 88px;
+    outline: none;
+}
+.mesg-code:after{
+    border-color: #333;
+}
+button[disabled]{
+    color: #ccc;
+}
+button[disabled]:after{
+    border-color: #ccc;
+}
+#submit{
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+#submit.disabled{
+    background-color: #ccc;
+}
+
+.wecode a{
+    width: 100%;
+    margin-top: 22px;
+    color: #686868;
+    display: inline-block; 
+    background-color: #1EC00D;
+    color: #fff;
+    text-align: center;
+}
+.wecode a .icon{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 18px;
+    margin-right: 8px;
+    background: url('../images/a7985-2029.svg') no-repeat center;
+    background-size: cover;
+}
+.or{
+    width:100%;
+    text-align:center;
+    position:relative;
+    margin-top:52px;
+    font-size:12px;
+    color:#999;
+}
+.or:before,.or:after{
+     position:absolute;
+    content: "";
+    top:0;
+    width:34%;
+    border-bottom:1px dashed #e5e5e5;
+    top:50%;
+    transform:translate(0,-50%) scale(1,0.5);
+    -webkit-transform:translate(0,-50%) scale(1,0.5); 
+}
+.or:before{
+    left:0;
+}
+.or:after{
+    right:0;
+}
+.poupVerifyBox{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 640px;
+    margin: auto;
+}
+.poupVerifyBox .bgMask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+}
+
+.poupVerifyBox .content{
+    border-radius: 4px;
+    background-color: #fff;
+    top: 25%;
+    left: 38px;
+    right: 38px;
+    max-width: 320px;
+    margin: auto;
+    padding: 17px 15px;
+}
+.code-box {
+    width: 110px;
+    height: 40px;
+    margin: 33px auto 20px;
+}
+.code-box:after{
+    border-color: #e5e5e5;
+}
+.code-box img {
+    /*width:75px;*/
+    height: 40px;
+    vertical-align:top;
+    position: relative;
+    padding: 1px;
+    z-index: 10;
+    /*margin-top:-20px;
+    border: 1px solid transparent;*/
+}
+.poupVerifyBox .inputBox{
+    position: relative;
+    max-width: 200px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    text-align: center;
+    overflow: hidden;
+}
+.poupVerifyBox .inputBox .number{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+}
+#hiddenInput{
+    left: 0;
+    top: 0;
+    opacity: 0.01;
+    color:transparent;
+    margin-left: -100%;
+    width: 200%;
+    height: 32px;
+    z-index: 10;
+}
+.inputBox .border1px:after{
+    border-color: #e5e5e5;
+}
+.inputBox .current:after{
+    border-color: #666;
+}
+#hiddenInput2{
+    left: 0;
+    top: 0;
+    opacity: 0.01;
+    color:transparent;
+    width: 100%;
+    height: 32px;
+    z-index: 1;
+    pointer-events:none,
+}
