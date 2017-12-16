@@ -389,7 +389,7 @@ $(function(){
 			};
 
     		$.ajax({
-	             url: _self.appUrl+"/api-check-code.html",
+	             url: _self.appUrl+"/api-validate-code.html",
                  type: 'POST',
                  data: postData,
                  dataType: 'json',

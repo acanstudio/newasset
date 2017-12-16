@@ -69,7 +69,7 @@ var LOGIN = {
 		postData._csrf = $('#_csrf').val();
 		 $.ajax({
 	        type: "POST",
-	        url: _self.APPURL+"/api-check-code.html",
+	        url: _self.APPURL+"/api-validate-code.html",
 	        dataType: "json",
 	        data: postData,
 	        success: function(responseText){
@@ -91,7 +91,7 @@ var LOGIN = {
 		postData._csrf = $('#_csrf').val();
 		$.ajax({
 	        type: "POST",
-	        url: _self.APPURL+"/api-register.html",
+	        url: _self.APPURL+"/signup.html",
 	        dataType: "json",
 	        data: postData,
 	        success: function(responseText){
